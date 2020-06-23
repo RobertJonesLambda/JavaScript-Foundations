@@ -60,11 +60,11 @@ let monthlyRate = numerator/denominator;
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
-function mortgageCalculator(){
-   return name + ", your monthly rate is $" + monthlyRate; 
-}
+// function mortgageCalculator(){
+//    return name + ", your monthly rate is $" + monthlyRate; 
+// }
 
-console.log(mortgageCalculator())
+// console.log(mortgageCalculator())
 
 
 
@@ -75,8 +75,16 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-
-
+function mortgageCalculator(){
+    let n1 = Math.pow((1 + monthlyInterestRate), periods);
+    let numerator = principal * n1 * monthlyInterestRate;
+    let denominator = n1 - 1;
+    function monthlyRate(){
+        return principal * (numerator / denominator);
+    }
+    return name + ", your monthly rate is $" + monthlyRate(); 
+}
+console.log(mortgageCalculator())
 
 
 // 🏡 Task 5: Conditionals
