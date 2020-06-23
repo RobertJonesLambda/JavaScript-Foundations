@@ -48,10 +48,10 @@ let denominator = n1 - 1;
 let monthlyRate = numerator/denominator;
 
 
-console.log(n1)
-console.log(numerator)
-console.log(denominator)
-console.log(monthlyRate)
+// console.log(n1)
+// console.log(numerator)
+// console.log(denominator)
+// console.log(monthlyRate)
 
 
 // 🏡 Task 3: Function
@@ -61,8 +61,10 @@ If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly 
 */
 
 function mortgageCalculator(){
-    
+   return name + ", your monthly rate is $" + monthlyRate; 
 }
+
+console.log(mortgageCalculator())
 
 
 
