@@ -99,6 +99,13 @@ function mortgageCalculator() {
     let n1 = Math.pow((1 + monthlyInterestRate), periods);
     let numerator = n1 * monthlyInterestRate;
     let denominator = n1 - 1;
+    let creditScore = num (Math.floor(Math.random() * 800);
+        if (num <= 660){
+            return (interestRate + 0.5);
+        } else if (num >=740) {
+            return (interestRate - 0.5);
+        }
+
     function monthlyRate() {
         return principal * (numerator / denominator);
     }
