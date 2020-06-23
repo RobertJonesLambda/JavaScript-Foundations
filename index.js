@@ -75,16 +75,16 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-function mortgageCalculator(){
-    let n1 = Math.pow((1 + monthlyInterestRate), periods);
-    let numerator = principal * n1 * monthlyInterestRate;
-    let denominator = n1 - 1;
-    function monthlyRate(){
-        return principal * (numerator / denominator);
-    }
-    return name + ", your monthly rate is $" + monthlyRate(); 
-}
-console.log(mortgageCalculator())
+// function mortgageCalculator(){
+//     let n1 = Math.pow((1 + monthlyInterestRate), periods);
+//     let numerator = n1 * monthlyInterestRate;
+//     let denominator = n1 - 1;
+//     function monthlyRate(){
+//         return principal * (numerator / denominator);
+//     }
+//     return name + ", your monthly rate is $" + monthlyRate(); 
+// }
+// console.log(mortgageCalculator())
 
 
 // 🏡 Task 5: Conditionals
@@ -95,7 +95,16 @@ Then, add control flow within your function such that IF creditScore is above 74
 Hint: To drop an interest rate by 5% you can take monthlyRate and multiply it by 0.95. Similarly, to increase an interest rate by 5% you'd do monthlyRate * 1.05. 
 */
 
-
+function mortgageCalculator() {
+    let n1 = Math.pow((1 + monthlyInterestRate), periods);
+    let numerator = n1 * monthlyInterestRate;
+    let denominator = n1 - 1;
+    function monthlyRate() {
+        return principal * (numerator / denominator);
+    }
+    return name + ", your monthly rate is $" + monthlyRate();
+}
+console.log(mortgageCalculator())
 
 
 // 🏡 Task 6: Loops
